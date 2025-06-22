@@ -1,0 +1,220 @@
+/* src/pages/HomePage.css */
+
+@keyframes float-light {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+  50% { transform: translateY(-30px) rotate(45deg); opacity: 0.4; }
+  100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+}
+
+.homepage-container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 3rem 4rem;
+  background-color: #10131c;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-container::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle, rgba(0, 188, 212, 0.15), transparent 70%);
+  border-radius: 50%;
+  animation: float-light 20s infinite ease-in-out;
+  z-index: 0;
+}
+
+.homepage-container::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: 5%;
+  right: 10%;
+  background: radial-gradient(circle, rgba(77, 182, 172, 0.15), transparent 70%);
+  border-radius: 50%;
+  animation: float-light 25s infinite ease-in-out -5s;
+  z-index: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.connect-wallet {
+  background-color: #00bcd4;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connect-wallet:hover {
+  background-color: #0097a7;
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.vaults-grid {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 2rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+/* Custom scrollbar for webkit browsers */
+.vaults-grid::-webkit-scrollbar {
+  height: 12px;
+}
+.vaults-grid::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.vaults-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 188, 212, 0.5);
+  border-radius: 10px;
+  border: 3px solid #10131c;
+}
+.vaults-grid::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 188, 212, 0.8);
+}
+
+/* New VaultCard Styling */
+.vault-card {
+  background: rgba(31, 37, 51, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.vault-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 188, 212, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 188, 212, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.vault-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.vault-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.vault-status.open {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+.vault-status.closed {
+  background-color: #4c556e;
+  color: #eef2f7;
+}
+
+.vault-info {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #2a3142;
+  font-size: 0.95rem;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item strong {
+  color: #c0c2c5;
+  font-weight: 500;
+}
+
+.info-item span {
+  font-weight: 600;
+  color: #fff;
+}
+
+.view-vault-btn {
+  width: 100%;
+  background: linear-gradient(45deg, #00bcd4, #4db6ac);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-vault-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .homepage-container {
+    padding: 1.5rem;
+  }
+  .vaults-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-container {
+    padding: 1rem;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .vaults-grid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}

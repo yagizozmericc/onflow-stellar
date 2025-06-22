@@ -1,0 +1,96 @@
+.wallet-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.wallet-button.connect,
+.wallet-button.disconnect {
+  background-color: #1e90ff;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.wallet-button.connect:hover {
+  background-color: #187bcd;
+}
+
+.wallet-button.disconnect {
+  background-color: #dc3545;
+}
+
+.wallet-button.disconnect:hover {
+  background-color: #c82333;
+}
+
+.wallet-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.connection-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: limegreen;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.wallet-address-display {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.wallet-error {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #ff4d4f;
+  color: white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.error-dismiss {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.error-dismiss:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

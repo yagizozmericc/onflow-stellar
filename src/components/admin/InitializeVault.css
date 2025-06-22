@@ -1,0 +1,113 @@
+.init-vault-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1f2533;
+    border: 1px solid #2a3142;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.init-vault-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #00bcd4;
+}
+
+.init-vault-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.init-vault-form input,
+.init-vault-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #2a3142;
+    border: 1px solid #3c445a;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.init-vault-form input::placeholder,
+.init-vault-form textarea::placeholder {
+    color: #78909c;
+}
+
+.init-vault-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.init-vault-form button {
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #00bcd4, #0097a7);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.init-vault-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.init-vault-form button:hover:not(:disabled) {
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+    transform: translateY(-2px);
+}
+
+.result-box, .warning-box, .success-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    word-break: break-all;
+}
+
+.result-box.success {
+    background-color: #2e7d32;
+    border: 1px solid #66bb6a;
+}
+.result-box.success a {
+    color: #c8e6c9;
+    text-decoration: underline;
+}
+
+.result-box.error {
+    background-color: #c62828;
+    border: 1px solid #ef5350;
+}
+
+.warning-box {
+    background-color: #ff8f00;
+    border: 1px solid #ffa726;
+    text-align: center;
+    font-weight: 500;
+}
+
+.warning-box .connect-wallet-btn {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.warning-box .connect-wallet-btn:hover {
+    background: #187bcd;
+}
+
+.success-box {
+    background-color: #2e7d32;
+    border: 1px solid #66bb6a;
+    color: #c8e6c9;
+} 

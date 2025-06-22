@@ -1,0 +1,39 @@
+/* AdminDashboard.css */
+
+.admin-dashboard-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    color: #fff;
+}
+
+.admin-tabs {
+    display: flex;
+    border-bottom: 2px solid #2a3142;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: #78909c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.tab-button:hover {
+    color: #fff;
+}
+
+.tab-button.active {
+    color: #00bcd4;
+    border-bottom-color: #00bcd4;
+}
+
+.admin-tab-content {
+    /* Content styling will be handled by the components inside */
+} 

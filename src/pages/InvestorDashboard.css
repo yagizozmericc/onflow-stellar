@@ -1,0 +1,125 @@
+/* src/pages/InvestorDashboard.css */
+
+:root {
+  --onflow-navy: #1f2533;
+  --onflow-card-bg: #2a3142;
+  --onflow-blue: #00bcd4;
+  --onflow-turquoise: #4db6ac;
+  --onflow-text-primary: #ffffff;
+  --onflow-text-secondary: #c0c2c5;
+  --onflow-green: #66bb6a;
+  --onflow-orange: #ffa726;
+  --onflow-red: #ef5350;
+  --onflow-gray: #78909c;
+}
+
+.investor-dashboard {
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: var(--onflow-navy);
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.welcome-message h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  color: var(--onflow-text-primary);
+}
+
+.welcome-message .wallet-address {
+  margin: 0.25rem 0 0;
+  font-family: 'monospace';
+  font-size: 1rem;
+  color: var(--onflow-turquoise);
+}
+
+.disconnect-wallet-btn {
+  background-color: var(--onflow-red);
+  color: var(--onflow-text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.disconnect-wallet-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+}
+
+/* Stats Summary */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Vaults Section */
+.vaults-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vaults-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: var(--onflow-text-primary);
+}
+
+.investor-vaults-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .investor-dashboard {
+    padding: 1.5rem;
+  }
+  .stats-summary, .investor-vaults-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .investor-dashboard {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .welcome-message h1 {
+    font-size: 1.75rem;
+  }
+  .stats-summary, .investor-vaults-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+} 
