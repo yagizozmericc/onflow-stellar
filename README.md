@@ -36,6 +36,16 @@ Stellar provides unmatched advantages:
 * Stellar Disbursement Platform (SDP) allows compliant, scalable fund disbursement.
 * Soroban's native authorization and contract-to-contract interactions enable robust credit logic.
 
+## Deployed Contracts (Testnet)
+
+Here are the addresses of the core contracts deployed on the Stellar Testnet:
+
+| Contract              | Address                                                              |
+| --------------------- | -------------------------------------------------------------------- |
+| **Vault System**      | `CBH4BB55IEP7O23T627DXH5EY53ALLFSWS72WTH3JM56GQLYPQB55ILM`             |
+| **USDC Token**        | `CD6IS572QHURLTR3JRUUPPXES554NRXLHJRNB2QWWJGZJFLQAUTSTEQM`             |
+| **Vault Share Token** | `CD67IXVOM7FAC6KZSLMYDT7PGR2OSA22NV7OC3CUSMINQMCRFFTHSDNK`             |
+
 ## Architecture Diagram
 
 ### Extended Architecture View
