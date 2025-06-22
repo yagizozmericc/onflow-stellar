@@ -1,5 +1,11 @@
 # OnFlow Stellar Hackathon Project - Technical Documentation
 
+## 🎬 Project Demo
+
+**[Watch the full demo on YouTube](https://www.youtube.com/watch?v=l5bOI6995Lw)**
+
+---
+
 ## Overview
 
 **OnFlow: Global Private Credit for Everyone, Built on Stellar**
