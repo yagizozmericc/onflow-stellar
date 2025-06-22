@@ -1,0 +1,27 @@
+{
+  "function": "initialize",
+  "args": [
+    { "type": "address", "value": "alice" },
+    { "type": "address", "value": "alice" },
+    { "type": "address", "value": "CD6IS572QHURLTR3JRUUPPXES554NRXLHJRNB2QWWJGZJFLQAUTSTEQM" },
+    { "type": "address", "value": "CD67IXVOM7FAC6KZSLMYDT7PGR2OSA22NV7OC3CUSMINQMCRFFTHSDNK" },
+    { "type": "i128", "value": "100000000000" },
+    {
+      "type": "vec",
+      "value": [
+        { "type": "u64", "value": "1721692800" },
+        { "type": "u64", "value": "1724371200" },
+        { "type": "u64", "value": "1726963200" }
+      ]
+    },
+    {
+      "type": "vec",
+      "value": [
+        { "type": "i128", "value": "30000000000" },
+        { "type": "i128", "value": "40000000000" },
+        { "type": "i128", "value": "30000000000" }
+      ]
+    },
+    { "type": "u64", "value": "2592000" }
+  ]
+}

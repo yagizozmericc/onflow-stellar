@@ -1,0 +1,9 @@
+{
+  "function": "initialize",
+  "args": [
+    { "type": "address", "value": "alice" },
+    { "type": "symbol", "value": "VaultShare" },
+    { "type": "symbol", "value": "VLT" },
+    { "type": "u32", "value": 7 }
+  ]
+}
